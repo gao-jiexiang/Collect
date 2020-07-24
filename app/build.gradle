@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'//步骤3
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.example.collect"
+        minSdkVersion 22
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // Butterknife requires Java 8.
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //步骤5
+    greendao {
+        //数据库版本号，升级时修改
+        schemaVersion 1
+        //生成的DAO，DaoMaster和DaoSession的包路径。默认与表实体所在的包路径相同
+        daoPackage 'com.example.collect.db'
+        //生成源文件的路径。默认源文件目录是在build目录中的(build/generated/source/greendao)
+        targetGenDir 'src/main/java'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //依赖
+    implementation 'com.android.support:design:29.0.1'
+//Recyclerview依赖
+    implementation 'com.android.support:recyclerview-v7:29.0.1'
+//glide依赖
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    // 可选依赖，解析json
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+//rxjava+retrofit
+// 必要rxjava2依赖
+    implementation "io.reactivex.rxjava2:rxjava:2.1.3"
+// 必要rxandrroid依赖，切线程时需要用到
+    implementation "io.reactivex.rxjava2:rxandroid:2.0.1"
+// 必要依赖，和Rxjava和Retrofit结合必须用到，下面会提到
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+
+    //ButtonLife
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+    // 上拉刷新下拉加载依赖
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+
+    //VerticalTabLayout
+    implementation 'q.rorbin:VerticalTabLayout:1.2.5'
+
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+
+    implementation 'org.sufficientlysecure:html-textview:3.9'
+
+    implementation 'com.youth.banner:banner:1.4.10'
+
+    // eventbus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    //badgeview
+    implementation 'q.rorbin:badgeview:1.1.3'
+
+    //greendao  步骤4
+    implementation 'org.greenrobot:greendao:3.2.2' // add library
+    implementation 'org.greenrobot:greendao-generator:3.2.2'
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/zhaung_image"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="170dp" />
+    <TextView
+        android:id="@+id/zhuang_name"
+        app:layout_constraintTop_toBottomOf="@id/zhaung_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="15dp"
+        android:text="123"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/zhaung_price"
+        android:textColor="@color/red"
+        android:text="12132"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/zhaung_image"
+        app:layout_constraintLeft_toRightOf="@id/zhuang_name"
+        android:layout_margin="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/zhuang_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="15dp"
+        android:textColor="@color/gray"
+        android:textSize="17sp"
+        android:text="123"
+        android:id="@+id/zhuang_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

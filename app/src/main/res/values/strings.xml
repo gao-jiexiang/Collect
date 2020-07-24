@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Collect</string>
+    <string name="unknow_error">未知错误</string>
+    <string name="conn_error">连接失败</string>
+    <string name="conn_timeout">连接超时</string>
+    <string name="net_error">网络错误</string>
+    <string name="parse_error">解析异常</string>
+    <string name="net_unused">当前网络不可用</string>
+    <string name="main_page">首页</string>
+    <string name="topic">专题</string>
+    <string name="sort">分类</string>
+    <string name="cart">购物车</string>
+    <string name="me">我的</string>
+    <string name="yuan">元起</string>
+    <string name="join">加入购物车</string>
+    <string name="buy">立即购买</string>
+    <string name="css_goods">
+        html,body,p{
+            padding:0px;
+            margin:0px;
+            text-align:center;
+        }
+        img{
+            width:100%;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            margin:auto;
+        }
+    </string>
+    <string name="not_login">未登录</string>
+    <string name="input_name">请输入名字</string>
+    <string name="input_psw">请输入密码</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+
+    <string name="use">请输入用户名</string>
+    <string name="pass">请输入密码</string>
+    <string name="surepass">请再次输入密码</string>
+    <string name="rmb">¥</string>
+    <string name="edit">编辑</string>
+    <string name="order">下单</string>
+    <string name="choose_all">全选</string>
+    <string name="search">搜索</string>
+    <string name="cancel">取消</string>
+    <string name="history">历史记录</string>
+    <string name="hot">热门搜索</string>
+</resources>

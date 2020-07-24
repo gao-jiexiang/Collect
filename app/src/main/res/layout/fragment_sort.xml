@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <q.rorbin.verticaltablayout.VerticalTabLayout
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tablayout"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:background="#EDEDED"
+        app:indicator_color="#FFFFFF"
+        app:indicator_gravity="fill"
+        app:tab_height="50dp"
+        app:tab_mode="scrollable" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        app:layout_constraintLeft_toRightOf="@id/tablayout"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/vp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
